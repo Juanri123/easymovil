@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Telefonos</title>
+</head>
+<body onload = cargarDispositivos()>
+    <h1>EASYMOVIL</h1>
+
+    <table width="100%" border="1" cellpadding="0" cellspacing="2" bordercolor="#000000">
+        <thead>
+        <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Modelo</th>
+        <th>Color</th>
+        <th>Almacenamiento</th>
+        <th>Procesador</th>
+        </tr>
+        </thead> 
+        <tbody id="tblContenido">
+            
+        </tbody>
+       </table>
+
+       <br>
+       <hr>
+
+       <div class="consulta">
+        <h3>Consultar Dispositivo</h3>
+        <input placeholder="Ingrese el ID" id='ID_consulta' type="number">
+        <button onclick="consultarDispositivo()" id="btn-consultar">Consultar</button>
+        <p> Nombre: <input placeholder="Marca" id='Marca' type="text"></p>
+        <p> Modelo: <input placeholder="Modelo" id='Modelo' type="text"></p>
+        <p> Color: <input placeholder="Color" id='Color' type="text"></p>
+        <p> Almacenamiento: <input  placeholder="Almacenamiento"id='Almacenamiento' type="text"></p>
+        <p> Procesador: <input placeholder="Procesador"id='Procesador' type="text"></p>
+        <button onclick="modificarDispositivo()">Modificar</button>
+        <button onclick="eliminarDispositivo()">Eliminar</button>
+    </div>
+
+
+    <div class="agregar">
+        <br> <hr>
+        <h3>Agregar Dispositivo</h3>
+        <div class="input">
+        <input placeholder="Marca" id="Marca_a" type="text">
+        <input placeholder="Modelo" id="Modelo_a" type="text">
+        <input placeholder="Color" id="Color_a" type="text">
+        <input placeholder="Almacenamiento" id="Almacenamiento_a" type="text">
+        <input placeholder="Procesador" id="Procesador_a" type="text">
+    </div>
+        <br><br>
+        <button onclick="nuevoDispositivo()">Agregar Nuevo Equipo</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
